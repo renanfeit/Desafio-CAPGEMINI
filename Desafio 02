@@ -1,0 +1,20 @@
+bool result = false;
+
+            while (!result)
+            {
+                Console.WriteLine("Insira um valor");
+                string senha = Console.ReadLine();
+
+                //Verificar se a quantidade de caracteres é menor que 6.
+                if (senha.Length < 6)
+                {
+                    int restante = 6 - senha.Length;
+                    Console.WriteLine($"Ainda restam { restante }");
+                }
+                else
+                {
+                    result = true;
+                    Console.WriteLine($"Quantidade de caracteres válida!");
+                }
+            }
+            Console.ReadLine();
