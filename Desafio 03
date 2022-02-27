@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int existe (char *str1, char *str2, int id) {
+    
+    int i, j = 0;
+    
+    for (i = id; i < strlen (str1); i++) {
+        if (str1[i] == str2[j])
+            j++;
+            
+        else 
+            j = 0;
+        if (j == strlen(str2))
+                return i;
+    }
+    return 0;
+}
+
+int main () {
+    char str1 [] = "ovo";
+    char str2 [] = "ovo";
+    int indice = 0, quantidade = 0;
+    
+    do {
+        indice = existe(str1, str2, indice);
+        printf ("Retorno: %d\n", indice);
+        if (indice != -1)
+        quantidade++;
+        
+    } while (indice != 0);
+    
+   
+    
+    return 0;
+    
+}
